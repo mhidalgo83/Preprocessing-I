@@ -135,6 +135,12 @@ table {
   font-family: 'Over the Rainbow', cursive;
   padding: 1% 0;
 }
+.media-500 {
+  border: none;
+  margin: auto;
+  width: 95%;
+  font-size: 0.7rem;
+}
 body {
   height: 100%;
   background-image: url("../images/background.jpg");
@@ -202,6 +208,11 @@ nav a:last-child {
   display: flex;
   justify-content: space-between;
 }
+@media only screen and (max-width: 500px) {
+  .wrapper {
+    flex-direction: column;
+  }
+}
 .wrapper .about {
   display: flex;
   background: rgba(40, 114, 110, 0.6);
@@ -215,10 +226,22 @@ nav a:last-child {
   width: 70%;
   margin: 0 2.5%;
 }
+@media only screen and (max-width: 500px) {
+  .wrapper .about {
+    border: none;
+    font-size: 0.7rem;
+    width: 95%;
+  }
+}
 .wrapper .about h2 {
   font-size: 2.5rem;
   font-family: 'Over the Rainbow', cursive;
   padding: 1% 0;
+}
+@media only screen and (max-width: 500px) {
+  .wrapper .about h2 {
+    font-size: 1.25rem;
+  }
 }
 .wrapper #img-info {
   height: 50vh;
@@ -226,6 +249,11 @@ nav a:last-child {
   margin: auto;
   border: solid black 0.5rem;
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.5);
+}
+@media only screen and (max-width: 500px) {
+  .wrapper #img-info {
+    display: none;
+  }
 }
 .skills {
   background: rgba(40, 114, 110, 0.6);
@@ -236,13 +264,38 @@ nav a:last-child {
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.5);
   margin: 2% 2.5%;
 }
+@media only screen and (max-width: 500px) {
+  .skills {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    font-size: 0.7rem;
+  }
+}
 .skills h2 {
   font-size: 2.5rem;
   font-family: 'Over the Rainbow', cursive;
   padding: 1% 0;
 }
+@media only screen and (max-width: 500px) {
+  .skills h2 {
+    font-size: 1.25rem;
+  }
+}
 .skills li {
   padding: 0.5rem 0;
+}
+@media only screen and (max-width: 500px) {
+  .skills li {
+    padding: 0.25rem 0;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .skills img {
+    width: 60%;
+    align-self: center;
+    margin-bottom: 1%;
+  }
 }
 .container {
   display: flex;
@@ -259,10 +312,23 @@ nav a:last-child {
   width: 94%;
   margin: 3% 2.5%;
 }
+@media only screen and (max-width: 500px) {
+  .work-history {
+    border: none;
+    margin: auto;
+    width: 95%;
+    font-size: 0.7rem;
+  }
+}
 .work-history h2 {
   font-size: 2.5rem;
   font-family: 'Over the Rainbow', cursive;
   padding: 1% 0;
+}
+@media only screen and (max-width: 500px) {
+  .work-history h2 {
+    font-size: 1.25rem;
+  }
 }
 .contact {
   background: rgba(40, 114, 110, 0.6);
@@ -275,8 +341,22 @@ nav a:last-child {
   margin: 3% 2.5%;
   margin-top: 5%;
 }
+@media only screen and (max-width: 500px) {
+  .contact {
+    border: none;
+    margin: auto;
+    width: 95%;
+    font-size: 0.7rem;
+    margin: 3% 2.5%;
+  }
+}
 .contact h2 {
   font-size: 2.5rem;
   font-family: 'Over the Rainbow', cursive;
   padding: 1% 0;
+}
+@media only screen and (max-width: 500px) {
+  .contact h2 {
+    font-size: 1.25rem;
+  }
 }
