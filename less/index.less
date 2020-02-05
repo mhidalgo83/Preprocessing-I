@@ -138,14 +138,133 @@ table {
 /* Set every element's box-sizing to border-box */
 * {
     box-sizing: border-box;
+
 }
 
-html {
-    font-size: 62.5%;
+
+//Variables
+@h1: 4rem;
+@h2: 2.5rem;
+
+//Mixins
+
+.flex() {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-html,
+.h2 {
+    font-size: 2.5rem;
+    font-family: 'Over the Rainbow', cursive;
+    padding: 1% 0;
+}
+
+.box-shadow() {
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.border() {
+    border: solid black .5rem;
+}
+
+.section-styles() {
+    background: red;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    padding: 1.5rem;
+    margin: auto;
+}
+
+//Styles
+
 body {
     height: 100%;
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 62.5%;
+    font-family: sans-serif;
+    text-transform: uppercase;
+}
+
+
+
+//Navbar
+
+nav {
+    .flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+    height: auto;
+    padding: 1rem;
     background: red;
+    width: 100%;
+    font-family: 'Over the Rainbow', cursive;
+    text-transform: none;
+    margin-bottom: 2rem;
+    border-bottom: solid black .5rem;
+
+
+    h1 {
+        font-size: @h1;
+        margin-left: 3%;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+        font-size: 1.6rem;
+        padding: 1.5rem 0;
+        text-transform: uppercase;
+
+        &:last-child {
+            margin-right: 3%;
+        }
+    }
+}
+
+//About section
+.wrapper {
+    .flex;
+    justify-content: space-between;
+
+    .about {
+        .flex;
+        .section-styles;
+        .border();
+        .box-shadow();
+        height: 75%;
+        width: 70%;
+
+        h2 {
+            .h2;
+        }
+    }
+
+    #img-info {
+        height: 50vh;
+        width: 20%;
+        margin: auto;
+        .border();
+        .box-shadow();
+    }
+
+
+}
+
+//Skills
+
+.skills {
+    .section-styles;
+    .border;
+    .box-shadow;
+    margin: 2% 2.5%;
+    h2 {
+        .h2;
+    }
+
+    li {
+        padding: .5rem 0;
+    }
 }
