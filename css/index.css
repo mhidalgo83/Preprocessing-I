@@ -139,7 +139,7 @@ table {
   border: none;
   margin: auto;
   width: 95%;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 }
 body {
   height: 100%;
@@ -229,7 +229,7 @@ nav a:last-child {
 @media only screen and (max-width: 500px) {
   .wrapper .about {
     border: none;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     width: 95%;
   }
 }
@@ -269,7 +269,7 @@ nav a:last-child {
     display: flex;
     flex-direction: column;
     border: none;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 }
 .skills h2 {
@@ -317,7 +317,7 @@ nav a:last-child {
     border: none;
     margin: auto;
     width: 95%;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 }
 .work-history h2 {
@@ -346,7 +346,7 @@ nav a:last-child {
     border: none;
     margin: auto;
     width: 95%;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     margin: 3% 2.5%;
   }
 }
