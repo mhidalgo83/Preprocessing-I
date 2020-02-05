@@ -145,12 +145,12 @@ table {
 //Variables
 @h1: 4rem;
 @h2: 2.5rem;
+@background: rgba(40, 114, 110, .6);
 
 //Mixins
 
 .flex() {
     display: flex;
-    flex-wrap: wrap;
 }
 
 .h2 {
@@ -168,11 +168,10 @@ table {
 }
 
 .section-styles() {
-    background: red;
+    background: @background;
     font-size: 1.4rem;
     line-height: 1.2;
     padding: 1.5rem;
-    margin: auto;
 }
 
 //Styles
@@ -182,33 +181,45 @@ body {
     background-image: url("../images/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     font-size: 62.5%;
     font-family: sans-serif;
     text-transform: uppercase;
 }
-
-
 
 //Navbar
 
 nav {
     .flex;
     justify-content: space-between;
-    align-content: center;
+    align-items: center;
     flex-wrap: wrap;
     height: auto;
     padding: 1rem;
-    background: red;
+    background: @background;
     width: 100%;
     font-family: 'Over the Rainbow', cursive;
     text-transform: none;
     margin-bottom: 2rem;
     border-bottom: solid black .5rem;
 
+    @media only screen and(max-width: 500px) {
+        align-items: center;
+        padding: .5rem;
+        border-bottom: solid black 1px;
+    }
+
 
     h1 {
         font-size: @h1;
         margin-left: 3%;
+
+        @media only screen and(max-width: 500px) {
+            font-size: @h1/2;
+            paddng: .5rem;
+            width: 100%;
+            margin: 0 22%;
+        }
     }
 
     a {
@@ -218,8 +229,16 @@ nav {
         padding: 1.5rem 0;
         text-transform: uppercase;
 
+        @media only screen and(max-width: 500px) {
+            font-size: 1.6rem/1.5;
+        }
+
         &:last-child {
             margin-right: 3%;
+
+            @media only screen and (max-width: 500px) {
+                margin-right: 0;
+            }
         }
     }
 }
@@ -234,8 +253,10 @@ nav {
         .section-styles;
         .border();
         .box-shadow();
+        flex-wrap: wrap;
         height: 75%;
         width: 70%;
+        margin: 0 2.5%;
 
         h2 {
             .h2;
@@ -249,8 +270,6 @@ nav {
         .border();
         .box-shadow();
     }
-
-
 }
 
 //Skills
@@ -260,11 +279,43 @@ nav {
     .border;
     .box-shadow;
     margin: 2% 2.5%;
+
     h2 {
         .h2;
     }
 
     li {
         padding: .5rem 0;
+    }
+}
+
+.container {
+    .flex;
+    flex-direction: column;
+}
+
+.work-history {
+    .section-styles;
+    .border;
+    .box-shadow;
+    height: auto;
+    width: 94%;
+    margin: 3% 2.5%;
+
+    h2 {
+        .h2;
+    }
+}
+
+.contact {
+    .section-styles;
+    .border;
+    .box-shadow;
+    width: 94%;
+    margin: 3% 2.5%;
+    margin-top: 5%;
+
+    h2 {
+        .h2;
     }
 }

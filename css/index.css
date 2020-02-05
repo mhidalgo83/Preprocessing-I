@@ -140,6 +140,7 @@ body {
   background-image: url("../images/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   font-size: 62.5%;
   font-family: sans-serif;
   text-transform: uppercase;
@@ -147,20 +148,35 @@ body {
 nav {
   display: flex;
   justify-content: space-between;
-  align-content: center;
+  align-items: center;
   flex-wrap: wrap;
   height: auto;
   padding: 1rem;
-  background: red;
+  background: rgba(40, 114, 110, 0.6);
   width: 100%;
   font-family: 'Over the Rainbow', cursive;
   text-transform: none;
   margin-bottom: 2rem;
   border-bottom: solid black 0.5rem;
 }
+@media only screen and (max-width: 500px) {
+  nav {
+    align-items: center;
+    padding: 0.5rem;
+    border-bottom: solid black 1px;
+  }
+}
 nav h1 {
   font-size: 4rem;
   margin-left: 3%;
+}
+@media only screen and (max-width: 500px) {
+  nav h1 {
+    font-size: 2rem;
+    paddng: 0.5rem;
+    width: 100%;
+    margin: 0 22%;
+  }
 }
 nav a {
   text-decoration: none;
@@ -169,26 +185,35 @@ nav a {
   padding: 1.5rem 0;
   text-transform: uppercase;
 }
+@media only screen and (max-width: 500px) {
+  nav a {
+    font-size: 1.06666667rem;
+  }
+}
 nav a:last-child {
   margin-right: 3%;
 }
+@media only screen and (max-width: 500px) {
+  nav a:last-child {
+    margin-right: 0;
+  }
+}
 .wrapper {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
 }
 .wrapper .about {
   display: flex;
-  flex-wrap: wrap;
-  background: red;
+  background: rgba(40, 114, 110, 0.6);
   font-size: 1.4rem;
   line-height: 1.2;
   padding: 1.5rem;
-  margin: auto;
   border: solid black 0.5rem;
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  flex-wrap: wrap;
   height: 75%;
   width: 70%;
+  margin: 0 2.5%;
 }
 .wrapper .about h2 {
   font-size: 2.5rem;
@@ -203,11 +228,10 @@ nav a:last-child {
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
 .skills {
-  background: red;
+  background: rgba(40, 114, 110, 0.6);
   font-size: 1.4rem;
   line-height: 1.2;
   padding: 1.5rem;
-  margin: auto;
   border: solid black 0.5rem;
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.5);
   margin: 2% 2.5%;
@@ -219,4 +243,40 @@ nav a:last-child {
 }
 .skills li {
   padding: 0.5rem 0;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.work-history {
+  background: rgba(40, 114, 110, 0.6);
+  font-size: 1.4rem;
+  line-height: 1.2;
+  padding: 1.5rem;
+  border: solid black 0.5rem;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  height: auto;
+  width: 94%;
+  margin: 3% 2.5%;
+}
+.work-history h2 {
+  font-size: 2.5rem;
+  font-family: 'Over the Rainbow', cursive;
+  padding: 1% 0;
+}
+.contact {
+  background: rgba(40, 114, 110, 0.6);
+  font-size: 1.4rem;
+  line-height: 1.2;
+  padding: 1.5rem;
+  border: solid black 0.5rem;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  width: 94%;
+  margin: 3% 2.5%;
+  margin-top: 5%;
+}
+.contact h2 {
+  font-size: 2.5rem;
+  font-family: 'Over the Rainbow', cursive;
+  padding: 1% 0;
 }
