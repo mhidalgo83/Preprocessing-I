@@ -1,1 +1,362 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+.h2 {
+  font-size: 2.5rem;
+  font-family: 'Over the Rainbow', cursive;
+  padding: 1% 0;
+}
+.media-500 {
+  border: none;
+  margin: auto;
+  width: 95%;
+  font-size: 0.8rem;
+}
+body {
+  height: 100%;
+  background-image: url("../images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-size: 62.5%;
+  font-family: sans-serif;
+  text-transform: uppercase;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  height: auto;
+  padding: 1rem;
+  background: rgba(40, 114, 110, 0.6);
+  width: 100%;
+  font-family: 'Over the Rainbow', cursive;
+  text-transform: none;
+  margin-bottom: 2rem;
+  border-bottom: solid black 0.5rem;
+}
+@media only screen and (max-width: 500px) {
+  nav {
+    align-items: center;
+    padding: 0.5rem;
+    border-bottom: solid black 1px;
+  }
+}
+nav h1 {
+  font-size: 4rem;
+  margin-left: 3%;
+}
+@media only screen and (max-width: 500px) {
+  nav h1 {
+    font-size: 2rem;
+    paddng: 0.5rem;
+    width: 100%;
+    margin: 0 22%;
+  }
+}
+nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.6rem;
+  padding: 1.5rem 0;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 500px) {
+  nav a {
+    font-size: 1.06666667rem;
+  }
+}
+nav a:last-child {
+  margin-right: 3%;
+}
+@media only screen and (max-width: 500px) {
+  nav a:last-child {
+    margin-right: 0;
+  }
+}
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 500px) {
+  .wrapper {
+    flex-direction: column;
+  }
+}
+.wrapper .about {
+  display: flex;
+  background: rgba(40, 114, 110, 0.6);
+  font-size: 1.4rem;
+  line-height: 1.2;
+  padding: 1.5rem;
+  border: solid black 0.5rem;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  flex-wrap: wrap;
+  height: 75%;
+  width: 70%;
+  margin: 0 2.5%;
+}
+@media only screen and (max-width: 500px) {
+  .wrapper .about {
+    border: none;
+    font-size: 0.8rem;
+    width: 95%;
+  }
+}
+.wrapper .about h2 {
+  font-size: 2.5rem;
+  font-family: 'Over the Rainbow', cursive;
+  padding: 1% 0;
+}
+@media only screen and (max-width: 500px) {
+  .wrapper .about h2 {
+    font-size: 1.25rem;
+  }
+}
+.wrapper #img-info {
+  height: 50vh;
+  width: 20%;
+  margin: auto;
+  border: solid black 0.5rem;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.5);
+}
+@media only screen and (max-width: 500px) {
+  .wrapper #img-info {
+    display: none;
+  }
+}
+.skills {
+  background: rgba(40, 114, 110, 0.6);
+  font-size: 1.4rem;
+  line-height: 1.2;
+  padding: 1.5rem;
+  border: solid black 0.5rem;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  margin: 2% 2.5%;
+}
+@media only screen and (max-width: 500px) {
+  .skills {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    font-size: 0.8rem;
+  }
+}
+.skills h2 {
+  font-size: 2.5rem;
+  font-family: 'Over the Rainbow', cursive;
+  padding: 1% 0;
+}
+@media only screen and (max-width: 500px) {
+  .skills h2 {
+    font-size: 1.25rem;
+  }
+}
+.skills li {
+  padding: 0.5rem 0;
+}
+@media only screen and (max-width: 500px) {
+  .skills li {
+    padding: 0.25rem 0;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .skills img {
+    width: 60%;
+    align-self: center;
+    margin-bottom: 1%;
+  }
+}
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.work-history {
+  background: rgba(40, 114, 110, 0.6);
+  font-size: 1.4rem;
+  line-height: 1.2;
+  padding: 1.5rem;
+  border: solid black 0.5rem;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  height: auto;
+  width: 94%;
+  margin: 3% 2.5%;
+}
+@media only screen and (max-width: 500px) {
+  .work-history {
+    border: none;
+    margin: auto;
+    width: 95%;
+    font-size: 0.8rem;
+  }
+}
+.work-history h2 {
+  font-size: 2.5rem;
+  font-family: 'Over the Rainbow', cursive;
+  padding: 1% 0;
+}
+@media only screen and (max-width: 500px) {
+  .work-history h2 {
+    font-size: 1.25rem;
+  }
+}
+.contact {
+  background: rgba(40, 114, 110, 0.6);
+  font-size: 1.4rem;
+  line-height: 1.2;
+  padding: 1.5rem;
+  border: solid black 0.5rem;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  width: 94%;
+  margin: 3% 2.5%;
+  margin-top: 5%;
+}
+@media only screen and (max-width: 500px) {
+  .contact {
+    border: none;
+    margin: auto;
+    width: 95%;
+    font-size: 0.8rem;
+    margin: 3% 2.5%;
+  }
+}
+.contact h2 {
+  font-size: 2.5rem;
+  font-family: 'Over the Rainbow', cursive;
+  padding: 1% 0;
+}
+@media only screen and (max-width: 500px) {
+  .contact h2 {
+    font-size: 1.25rem;
+  }
+}

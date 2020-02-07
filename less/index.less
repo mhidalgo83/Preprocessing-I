@@ -4,56 +4,386 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
 }
+
 body {
-	line-height: 1;
+    line-height: 1;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+    list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+    quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
     box-sizing: border-box;
+
 }
 
-html, body {
+
+//Variables
+@h1: 4rem;
+@h2: 2.5rem;
+@background: rgba(40, 114, 110, .6);
+@p-500: .8rem;
+
+//Mixins
+
+.flex() {
+    display: flex;
+}
+
+.h2 {
+    font-size: 2.5rem;
+    font-family: 'Over the Rainbow', cursive;
+    padding: 1% 0;
+}
+
+.box-shadow() {
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.border() {
+    border: solid black .5rem;
+}
+
+.section-styles() {
+    background: @background;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    padding: 1.5rem;
+}
+
+.media-500 {
+    border: none;
+    margin: auto;
+    width: 95%;
+    font-size: @p-500;
+}
+
+//Styles
+
+body {
     height: 100%;
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-size: 62.5%;
+    font-family: sans-serif;
+    text-transform: uppercase;
 }
 
+//Navbar
+
+nav {
+    .flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: auto;
+    padding: 1rem;
+    background: @background;
+    width: 100%;
+    font-family: 'Over the Rainbow', cursive;
+    text-transform: none;
+    margin-bottom: 2rem;
+    border-bottom: solid black .5rem;
+
+    @media only screen and(max-width: 500px) {
+        align-items: center;
+        padding: .5rem;
+        border-bottom: solid black 1px;
+    }
+
+
+    h1 {
+        font-size: @h1;
+        margin-left: 3%;
+
+        @media only screen and(max-width: 500px) {
+            font-size: @h1/2;
+            paddng: .5rem;
+            width: 100%;
+            margin: 0 22%;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+        font-size: 1.6rem;
+        padding: 1.5rem 0;
+        text-transform: uppercase;
+
+        @media only screen and(max-width: 500px) {
+            font-size: 1.6rem/1.5;
+        }
+
+        &:last-child {
+            margin-right: 3%;
+
+            @media only screen and (max-width: 500px) {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+//About section
+.wrapper {
+    .flex;
+    justify-content: space-between;
+
+    @media only screen and (max-width: 500px) {
+        flex-direction: column;
+    }
+
+    .about {
+        .flex;
+        .section-styles;
+        .border();
+        .box-shadow();
+        flex-wrap: wrap;
+        height: 75%;
+        width: 70%;
+        margin: 0 2.5%;
+
+        @media only screen and(max-width: 500px) {
+            border: none;
+            font-size: @p-500;
+            width: 95%;
+        }
+
+        h2 {
+            .h2;
+
+            @media only screen and(max-width: 500px) {
+                font-size: @h2/2;
+            }
+        }
+    }
+
+    #img-info {
+        height: 50vh;
+        width: 20%;
+        margin: auto;
+        .border();
+        .box-shadow();
+
+        @media only screen and (max-width: 500px) {
+            display: none;
+        }
+    }
+}
+
+//Skills
+
+.skills {
+
+    .section-styles;
+    .border;
+    .box-shadow;
+    margin: 2% 2.5%;
+
+    @media only screen and(max-width: 500px) {
+        .flex;
+        flex-direction: column;
+        border: none;
+        font-size: @p-500;
+    }
+
+    h2 {
+        .h2;
+
+        @media only screen and (max-width: 500px) {
+            font-size: @h2/2;
+        }
+
+    }
+
+    li {
+        padding: .5rem 0;
+
+        @media only screen and (max-width: 500px) {
+            padding: .25rem 0;
+        }
+    }
+
+    img {
+        @media only screen and(max-width: 500px) {
+            width: 60%;
+            align-self: center;
+            margin-bottom: 1%;
+        }
+    }
+}
+
+.container {
+    .flex;
+    flex-direction: column;
+}
+
+.work-history {
+    .section-styles;
+    .border;
+    .box-shadow;
+    height: auto;
+    width: 94%;
+    margin: 3% 2.5%;
+
+    @media only screen and(max-width: 500px) {
+        .media-500;
+    }
+
+    h2 {
+        .h2;
+
+        @media only screen and(max-width: 500px) {
+            font-size: @h2/2;
+        }
+    }
+}
+
+.contact {
+    .section-styles;
+    .border;
+    .box-shadow;
+    width: 94%;
+    margin: 3% 2.5%;
+    margin-top: 5%;
+
+    @media only screen and (max-width: 500px) {
+        .media-500;
+        margin: 3% 2.5%;
+    }
+
+    h2 {
+        .h2;
+
+        @media only screen and (max-width: 500px) {
+            font-size: @h2/2;
+        }
+    }
+}
